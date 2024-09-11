@@ -1,0 +1,76 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.download {
+  background-color: $grisClaro;
+  padding: $separacion;
+
+  // &__heading {
+  //   color: $grisClaro;
+  // }
+
+  &__grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include tablet {
+      @include grid(2, $separacion);      
+    }    
+  }
+
+  &__image {
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 50%;
+    transition-property: transform;
+    transition-duration: 300ms;
+
+    &:hover {
+      transform: rotate(4deg) scale(1.2);
+    }
+  }
+}
+
+.tiendas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  margin-top: 3rem;
+  
+  &__heading,
+  &__texto {
+    text-align: center;
+  }
+
+  &__heading {
+   color: $dark-green;
+   margin: 2rem 0 0 0;
+   text-transform: capitalize;
+   font-size: 2.4rem;
+   line-height: 1;
+   margin: 0;
+
+   
+  }
+
+  &__texto {
+    margin-bottom: 3rem;
+  }
+
+  &__grid {    
+    @include grid(2,2rem);        
+  }
+
+  &__enlace {
+    transition-property: transform;
+    transition-duration: 500ms;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+
+}

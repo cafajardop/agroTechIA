@@ -1,0 +1,99 @@
+@import "variables";
+@import "mixins";
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $fuenteSecundaria;
+  font-size: 1.6rem;
+  background-color: $cafeClaro;
+  margin: 0 auto;
+}
+
+p {
+  color: $negro;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+.contenedor {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: $negro;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $fuentePrincipal;
+  margin: $separacion 0 $separacion 0;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+  color: $primary-color;
+
+  span {
+    color: $secondary-color;
+    font-size: 1.8rem;
+    display: block; // posicionar abajo un texto
+  }
+
+  &::after {
+    // para poner los granitos de cafe lo hacemos con un after despues del h2
+    content: "";
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    margin: 0 auto;
+    background-image: url(../img/flower.svg);
+    background-size: 10rem;
+  }
+}
+
+.heading-blanco {
+  @extend h2;
+  color: $blanco;
+
+  span {
+    color: $blanco;
+  }
+  &::after {
+    display: none;
+  }
+}
+
+h3 {
+  font-size: 3.2rem;
+}

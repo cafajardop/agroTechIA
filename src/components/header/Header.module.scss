@@ -1,0 +1,65 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+.header {
+  padding: 5rem 0;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include tablet {
+    min-height: 50rem;
+  }
+
+  &::before{
+    content: '';
+    background-color: $negro;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: .6;
+  }
+
+  .contenido-header {
+    position: relative;
+    h1 {
+      text-align: center;
+      color: $blanco;
+      text-transform: uppercase;
+      margin-top: 5rem;
+      @include tablet {
+        margin-top: 10rem;
+      }
+    }
+  }
+
+  .texto-header h3{
+    color:  $blanco;
+  }
+}
+
+.barra {
+  display: flex;
+  flex-direction: column;
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .logo {
+    width: 50%;
+    margin: 0 auto;
+
+    @include tablet {
+      width: 20rem;
+      margin: 0;
+    }
+  }
+}
+
+.header-inicio {
+  background-image: url(../../img/header_inicio.jpg);
+}

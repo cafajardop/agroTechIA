@@ -1,0 +1,38 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.pasos {
+  margin-top: 5rem;
+
+  &__contenido {
+    // background-color: rgba($dark-green, 0.4);
+    margin-top: -1px;
+  }
+
+  &__heading {
+    text-align: center;
+    color: $blanco;
+
+    &__description {
+      font-size: 1.8rem;
+      display: block;
+    }
+  }
+
+  &__grid {
+    @include tablet {
+      @include grid(3, $separacion)
+    }
+  }
+
+  &__imagen {
+    transition-property: transform;
+    transition-duration: 300ms;
+    &:hover {
+      transform: rotate(-4deg) scale(1.2);
+      cursor: pointer;
+    }
+  }
+
+
+}
