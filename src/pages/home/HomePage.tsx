@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import flowerTwo from "../../img/flower-two.svg";
 import flowerThree from "../../img/flower-three.svg";
 import flowerFour from "../../img/flower-four.svg";
-import { JoinUs, Testimonies } from "@components/index";
+import { JoinUs, Planes, Testimonies } from "@components/index";
 
 export const HomePage = () => {
   // const { t } = useTranslation('translation', { keyPrefix: 'welcome' });
@@ -27,6 +27,8 @@ export const HomePage = () => {
         icons={icons}
       />      
       <Testimonies mainTitle={t("mainTitle")} title={t("title")} />
+
+      <Planes/>
 
       <JoinUs/>
     </div>

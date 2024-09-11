@@ -8,3 +8,4 @@ export * from './steps/Steps';
 export * from './join-us/JoinUs';
 export * from './download-page/Download';
 export * from './controls/button-whatsapp/ButtonWhatsapp';
+export * from './planes/Planes';

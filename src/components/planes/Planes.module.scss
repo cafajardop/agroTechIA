@@ -1,0 +1,28 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.planes {
+
+  background-color: $blanco;
+  margin-bottom: 10rem;
+  // h2 {
+  //   @include headingBorder($blanco, $primary-green )
+  // }
+
+  .descripcion {
+    color: $blanco;
+  }
+
+  &__nuestros_planes {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      flex-direction: row;
+      max-width: 80rem;
+      margin-inline: auto;
+      margin-block-start: 10rem;
+    }
+  }
+
+}

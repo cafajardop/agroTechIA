@@ -1,0 +1,78 @@
+@import "../../../../scss/variables";
+@import "../../../../scss/mixins";
+
+.plan {
+  flex-grow: 1;
+  background-color: $blanco;
+  padding: 16rem 4rem 4rem 4rem;
+  border-bottom: 1px solid $dark-green;
+  margin-top: 2rem;
+
+  @include tablet {
+    border: none;
+    transition-property: transform;
+    transition-duration: 300ms;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .precio {
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .listado {
+    li {
+      text-align: center;
+      margin-bottom: 2rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.inicio {
+    @include iconoBg("../../../../img/icono_inicio.svg");
+    & {
+      border: 1px solid $dark-green;
+      border-radius: 10px;
+    }
+  }
+
+  &.negocio {
+    background-color: $primary-green;
+    order: -1;
+    @include iconoBg("../../../../img/icono_negocio.svg");
+
+    @include tablet {
+      order: unset;
+      margin-block: -5rem;
+      border-radius: 2rem;
+      background-position: 50% 7rem;
+      padding-top: calc(16rem + 5rem);
+      z-index: 100;
+    }
+  }
+
+  &.pro {
+    @include iconoBg("../../../../img/icono_pro.svg");
+    & {
+      border: 1px solid $dark-green;
+      border-radius: 10px;
+    }
+  }
+
+  .boton_plan {
+    @include boton($primary-green, $blanco);
+    & {
+      border: 2px solid $blanco;
+      display: block;
+      margin-top: 2rem;
+    }
+  }
+}
