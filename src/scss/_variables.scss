@@ -3,12 +3,13 @@ $fuenteSecundaria: "Roboto", sans-serif;
 $fuenteCursiva: "Bona Nova", sans-serif;
 
 // Media Querys
-$telefono: 480px;
+$phone: 480px;
 $tablet: 768px;
 $desktop: 1024px;
 
 $primary-color: #5e311e;
 $secondary-color: #c39c63;
+$gray-color: #333;
 $primary-green: #2a7031; // Verde primario más oscuro
 $secondary-color: #557b2f; // Verde secundario más oscuro
 $dark-green: #1b5e20; // Verde oscuro profundo para el fondo del copyright
@@ -27,3 +28,7 @@ $fuenteSans: "Arial, sans-serif"; // Fuente sans-serif para el texto de copyrigh
 
 // Unidades
 $separacion: 5rem;
+
+
+$border-radius: 5px;
+$shadow-light: 0 5px 8px rgba(0, 0, 0, 0.2), 0 9px 26px rgba(0, 0, 0, 0.19);

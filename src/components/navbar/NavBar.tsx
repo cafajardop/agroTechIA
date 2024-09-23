@@ -6,8 +6,8 @@ export const NavBar = () => {
     <nav className={styles["nav-principal"]}>
       <Link to="/">Inicio</Link>
       <Link to="/about">Nosotros</Link>
-      <Link to="/contact">Blog</Link>
-      <Link to="/contact">Contacto</Link>
+      <Link to="/contact">Conctac</Link>
+      <Link to="/auth">Login</Link>
     </nav>
   );
 };
