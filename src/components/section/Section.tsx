@@ -8,15 +8,16 @@ interface Icon {
 }
 
 interface Props {
+  id: string;
   mainTitle?: string;
   title?: string;
   paragraph?: string;
   icons?: Icon[];
 }
 
-export const Section = ({ mainTitle, title, paragraph, icons }: Props) => {
+export const Section = ({ id, mainTitle, title, paragraph, icons }: Props) => {
   return (
-    <>
+    <div id={id}>
       <h2>
         <span>{mainTitle}</span> {title}
       </h2>
@@ -35,6 +36,6 @@ export const Section = ({ mainTitle, title, paragraph, icons }: Props) => {
           </ul>
         </section>
       )}
-    </>
+    </div>
   );
 };

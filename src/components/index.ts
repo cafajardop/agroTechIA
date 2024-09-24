@@ -5,7 +5,7 @@ export * from './app-content/AppContent';
 export * from './section/Section';
 export * from './testimonies/Testimonies';
 export * from './steps/Steps';
-export * from './join-us/JoinUs';
+export * from './blog-us/BlogUs';
 export * from './download-page/Download';
 export * from './controls/button-whatsapp/ButtonWhatsapp';
 export * from './planes/Planes';

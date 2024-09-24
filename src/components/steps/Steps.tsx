@@ -5,7 +5,13 @@ import stepTwo from "../../img/cellphone1.png";
 import stepThree from "../../img/cellphone3.png";
 // import wave from "../../img/wave.svg";
 
-export const Steps = () => {
+interface Props {
+  id: string;
+  mainTitle?: string;
+  title?: string;
+}
+
+export const Steps = ({ id, mainTitle, title }: Props) => {
   const data = [
     { src: stepOne, alt: "icon step 1" },
     { src: stepTwo, alt: "icon step 1" },
@@ -13,13 +19,10 @@ export const Steps = () => {
   ];
 
   return (
-    <section className={styles.pasos}>
+    <section id={id} className={styles.pasos}>
       <div className={styles.pasos__contenido}>
-        <h2 className={styles.pasos__heading}>
-          Cómo funciona?
-          <span className={styles.pasos__heading__description}>
-            tan fácil como 1,2 y 3
-          </span>
+        <h2>
+          <span>{mainTitle}</span> {title}
         </h2>
 
         <div className={styles.pasos__grid}>

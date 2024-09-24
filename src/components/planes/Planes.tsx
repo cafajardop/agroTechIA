@@ -1,20 +1,28 @@
-import React from 'react'
-import styles from './Planes.module.scss';
-import { Card } from './fragments/cards/Card';
+import React from "react";
+import styles from "./Planes.module.scss";
+import { Card } from "./fragments/cards/Card";
 
-export const Planes = () => {
+interface Props {
+  id: string;
+  mainTitle: string;
+  title: string;
+  paragraph?: string;
+}
+
+export const Planes = ({ id, mainTitle, title, paragraph }: Props) => {
   return (
-    <section className={styles.planes}>
+    <section id={id} className={styles.planes}>
       <div className={styles.contenedor}>
-        <h2>Planes</h2>
-        <p className={styles.descripcion}>
-          Inicia gratis, crece tu plan cuando sea necesario
-        </p>
+        <h2>
+          <span>{mainTitle}</span> {title}
+        </h2>
+
+        <p>{paragraph}</p>
 
         <div className={styles.planes__nuestros_planes}>
-          <Card/>
+          <Card />
         </div>
-      </div> 
+      </div>
     </section>
-  )
-}
+  );
+};

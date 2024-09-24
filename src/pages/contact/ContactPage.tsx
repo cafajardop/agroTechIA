@@ -1,10 +1,18 @@
 
 
-export const ContactPage = () => {
+interface Props {
+  id: string;
+  mainTitle: string;
+  title: string;
+  paragraph?: string;
+}
+
+export const ContactPage = ({id, mainTitle, title}:Props) => {
   return (
-    <div>
-      <h1>Contacto</h1>
-      <p>Puedes contactarnos en esta página.</p>
-    </div>
+    <section id={id}>
+      <h2>
+        <span>{mainTitle}</span> {title}
+      </h2>
+    </section>
   )
 }

@@ -9,13 +9,14 @@ import testimonial5 from "../../img/testimonial5.jpg";
 import stars from "../../img/estrellas.png";
 import { useTranslation } from "react-i18next";
 
-interface Props {
+interface Props {  
+  id: string;
   mainTitle?: string;
   title?: string;
   paragraph?: string;
 }
 
-export const Testimonies = ({ mainTitle, title }: Props) => {
+export const Testimonies = ({id, mainTitle, title }: Props) => {
 
   const { t } = useTranslation();
 
@@ -44,7 +45,7 @@ export const Testimonies = ({ mainTitle, title }: Props) => {
   ];
 
   return (
-    <>
+    <div id = {id}>
       <h2>
         <span>{mainTitle}</span> {title}
       </h2>
@@ -77,6 +78,6 @@ export const Testimonies = ({ mainTitle, title }: Props) => {
             ))}
         </div>
       </section>
-    </>
+    </div>
   );
 };
